@@ -10,9 +10,9 @@ import os
 from hashlib import sha256
 
 
-SecretId = 'AKIDHNSIuUd54nGTQeg3NZWDk13vWszRYW3J'
-SecretKey = 'A4kBXicOu99toSqFKE4hLn4KMz3xiIpT'
-domain = 'yexulong.xyz'
+SecretId = 'xxx'
+SecretKey = 'xxx'
+domain = 'xxx'
     
 def make_common_param(fun_host, fun_url, **fun_param):
     '''构造公共参数'''
