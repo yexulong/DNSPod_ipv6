@@ -106,8 +106,11 @@ def setConfig(file_name, section, key, modify_value):
 if __name__ == '__main__':
     ini_name = 'ip.ini'
     now_ipv6_addr = get_Local_ipv6_address()
+    print('现在IP为:' + now_ipv6_addr)
     last_ipv6_addr = getConfig(ini_name, 'IP', 'IPv6')
+    print('上次IP为:' + last_ipv6_addr)
     if now_ipv6_addr == last_ipv6_addr:
+        print('IP没有发生变化:'+ last_ipv6_addr)
         pass
     else:
         setConfig(ini_name, 'IP', 'IPv6', now_ipv6_addr)
