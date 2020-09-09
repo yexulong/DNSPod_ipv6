@@ -88,14 +88,14 @@ def get_Local_ipv6_address():
 def getConfig(file_name, section, key):
     '''获取config配置文件'''
     config = configparser.ConfigParser()
-    path = os.path.split(os.path.realpath(__file__))[0] + '/' + file_name
+    path = os.path.join(os.path.split(os.path.realpath(__file__))[0], file_name)
     config.read(path)
     return config.get(section, key)    
     
 def setConfig(file_name, section, key, modify_value):
     '''设置config配置文件'''
     config = configparser.ConfigParser()
-    path = os.path.split(os.path.realpath(__file__))[0] + '/' + file_name
+    path = os.path.join(os.path.split(os.path.realpath(__file__))[0], file_name)
     config.read(path)
     
     config.set(section, key, modify_value)
